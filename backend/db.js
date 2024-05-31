@@ -3,7 +3,6 @@
 //     description:string,
 //     completed:boolean
 // }
-
 const mongoose = require("mongoose");
 mongoose.connect(
   "mongodb+srv://rikteshs20:Rik%403708@cluster0.qi4wq4o.mongodb.net/TODO_APP_NEW"

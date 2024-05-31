@@ -1,8 +1,8 @@
-import { newTodo } from "./db";
-import { createTodo, updateTodo } from "./types";
-
 const express = require("express");
 const app = express();
+const { newTodo } = require("./db");
+const { createTodo, updateTodo } = require("./types");
+
 app.use(express.json());
 
 //new_todo-
@@ -47,7 +47,7 @@ app.put("/completed", async (req, res) => {
       msg: "Invalid Id",
     });
   }
-  await newTodo.update(
+  await newTodo.updateOne(
     {
       _id: markPayLoad.id,
     },
@@ -59,11 +59,3 @@ app.put("/completed", async (req, res) => {
 });
 
 app.listen(3000);
-
-// 1st - create app from express
-// 2nd - create routes/endpoints
-// 3rd - create input validations using Zod
-// 4th - create db.js for connecting database and make a schema to create, update and mark as done
-// 5th - write the logic of create, find, update in the main file which is index.js
-
-// Put this is the readme file
