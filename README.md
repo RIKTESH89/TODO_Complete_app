@@ -14,3 +14,5 @@ Backend Part -
 - 3rd - create input validations using Zod
 - 4th - create db.js for connecting database and make a schema to create update and mark as done
 - 5th - write the logic of create, find, update in the main file which is index.js
+
+//yet to fix the infinite requests to backend by using useEffect hook
