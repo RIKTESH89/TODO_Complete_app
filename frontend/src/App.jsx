@@ -17,7 +17,7 @@ const [todos,setTodos] = useState([]);
 
   return (
     <div>
-      <CreateTodo setTodos={setTodos}></CreateTodo>
+      <CreateTodo setTodos={setTodos} todos={todos}></CreateTodo>
       <RenderTodos todos={todos}></RenderTodos>
     </div>
   )
